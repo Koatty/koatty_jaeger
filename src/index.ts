@@ -3,7 +3,7 @@
  * @Usage:
  * @Author: xxx
  * @Date: 2020-12-24 10:32:14
- * @LastEditTime: 2023-02-21 17:35:14
+ * @LastEditTime: 2023-02-21 17:56:08
  */
 import { Logger } from "./logger";
 import { Koatty, Helper } from "koatty";
@@ -39,9 +39,7 @@ const defaultOptions: OptionsInterface = {
     // password: '',
   },
   Options: {
-    // tags: {
-    //   'my-awesome-service.version': '1.1.2',
-    // },
+    tags: {},
   }
 };
 
@@ -57,6 +55,7 @@ export async function KoattyJaeger(options: OptionsInterface, app: Koatty): Prom
   if (!config.Options.logger) {
     config.Options.logger = Logger;
   }
+  config.Options.tags[`${app.name}-version`] = app.version;
 
   const tracer = await initTracer(config, config.Options);
   app.setMetaData("tracer", tracer);
