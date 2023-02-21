@@ -3,7 +3,7 @@
  * @Usage:
  * @Author: xxx
  * @Date: 2020-12-24 10:32:14
- * @LastEditTime: 2023-02-21 17:56:08
+ * @LastEditTime: 2023-02-21 18:24:03
  */
 import { Logger } from "./logger";
 import { Koatty, Helper } from "koatty";
@@ -24,7 +24,7 @@ interface OptionsInterface extends TracingConfig {
  */
 const defaultOptions: OptionsInterface = {
   // todo
-  serviceName: 'my-awesome-service',
+  serviceName: 'unknownKoattyProject',
   sampler: {
     type: "const",
     param: 1,
@@ -49,13 +49,13 @@ export async function KoattyJaeger(options: OptionsInterface, app: Koatty): Prom
 
   config.Options.logger = Logger;
   if (!config.Options.metrics) {
-    const metrics = new PrometheusMetricsFactory(prometheus, app.name);
+    const metrics = new PrometheusMetricsFactory(prometheus, config.serviceName);
     config.Options.metrics = metrics;
   }
   if (!config.Options.logger) {
     config.Options.logger = Logger;
   }
-  config.Options.tags[`${app.name}-version`] = app.version;
+  config.Options.tags[`${config.serviceName}-version`] = app.version;
 
   const tracer = await initTracer(config, config.Options);
   app.setMetaData("tracer", tracer);
