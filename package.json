@@ -22,6 +22,7 @@
     "@microsoft/api-documenter": "^7.x.x",
     "@microsoft/api-extractor": "^7.x.x",
     "@rollup/plugin-json": "^6.x.x",
+    "@types/jaeger-client": "^3.18.4",
     "@types/jest": "^29.x.x",
     "@types/koa": "^2.x.x",
     "@types/node": "^18.x.x",
@@ -43,13 +44,17 @@
     "typescript": "^4.x.x"
   },
   "dependencies": {
+    "jaeger-client": "^3.19.0",
     "koa": "^2.x.x",
     "koatty": "^3.x.x",
-    "koatty_lib": "^1.x.x"
+    "koatty_lib": "^1.x.x",
+    "koatty_logger": "^2.x.x",
+    "prom-client": "^14.1.1"
   },
   "peerDependencies": {
     "koa": "^2.x.x",
     "koatty": "^3.x.x",
-    "koatty_lib": "^1.x.x"
+    "koatty_lib": "^1.x.x",
+    "koatty_logger": "^2.x.x"
   }
 }
