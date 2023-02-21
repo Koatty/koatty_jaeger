@@ -3833,9 +3833,9 @@ koatty_loader@^1.1.0, koatty_loader@^1.x.x:
     koatty_lib "^1.x.x"
 
 koatty_logger@^2.0.4, koatty_logger@^2.x.x:
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/koatty_logger/-/koatty_logger-2.0.4.tgz"
-  integrity sha512-ZRfHYPTeL2AcaPN5mTRqUzkAGz74JlFLXdSQuipPlrUBmHmsYMS9cp6PXhrOjYfkrx9dRIefVcrzGRNa20kgSA==
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/koatty_logger/-/koatty_logger-2.1.0.tgz"
+  integrity sha512-gXpPk3TcK7p7TsJ2UBevOeJNG5+C5hgbNuRJqmFh2fkAndvHx5dSxLbDEbTmyIZhSori/gFR95LeJvRoajpYkA==
   dependencies:
     koatty_lib "^1.x.x"
     winston "^3.8.2"

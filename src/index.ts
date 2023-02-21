@@ -3,9 +3,9 @@
  * @Usage:
  * @Author: xxx
  * @Date: 2020-12-24 10:32:14
- * @LastEditTime: 2023-02-21 18:24:03
+ * @LastEditTime: 2023-02-21 18:57:26
  */
-import { Logger } from "./logger";
+import { DefaultLogger } from "koatty_logger";
 import { Koatty, Helper } from "koatty";
 import * as prometheus from "prom-client";
 import { initTracer, PrometheusMetricsFactory, TracingConfig, TracingOptions } from "jaeger-client";
@@ -47,13 +47,12 @@ export async function KoattyJaeger(options: OptionsInterface, app: Koatty): Prom
   // todo
   const config = { ...defaultOptions, ...options };
 
-  config.Options.logger = Logger;
   if (!config.Options.metrics) {
     const metrics = new PrometheusMetricsFactory(prometheus, config.serviceName);
     config.Options.metrics = metrics;
   }
   if (!config.Options.logger) {
-    config.Options.logger = Logger;
+    config.Options.logger = DefaultLogger;
   }
   config.Options.tags[`${config.serviceName}-version`] = app.version;
 
