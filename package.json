@@ -50,11 +50,9 @@
   "dependencies": {
     "jaeger-client": "^3.19.0",
     "koatty_lib": "^1.x.x",
-    "koatty_logger": "^2.x.x",
     "prom-client": "^14.1.1"
   },
   "peerDependencies": {
-    "koatty_lib": "^1.x.x",
-    "koatty_logger": "^2.x.x"
+    "koatty_lib": "^1.x.x"
   }
 }
