@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Koatty/koatty_jaeger/compare/v1.1.0-2...v1.1.0) (2023-02-26)
+
+
+### Bug Fixes
+
+* default config ([47a1e96](https://github.com/Koatty/koatty_jaeger/commit/47a1e96e198d367d2365c8a060ac4b6f9d7d04df))
+* logger ([4647172](https://github.com/Koatty/koatty_jaeger/commit/4647172a007bad43441f57d7d3892d7d661a5970))
+* 修复logger错误 ([babcede](https://github.com/Koatty/koatty_jaeger/commit/babcede3733e975b0dfa86d92192649ff14b6863))
+
 ## [1.1.0-2](https://github.com/Koatty/koatty_jaeger/compare/v1.1.0-1...v1.1.0-2) (2023-02-21)
 
 ## [1.1.0-1](https://github.com/Koatty/koatty_jaeger/compare/v1.1.0-0...v1.1.0-1) (2023-02-21)
