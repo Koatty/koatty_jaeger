@@ -38,6 +38,8 @@
     "husky": "^4.x.x",
     "jest": "^29.x.x",
     "jest-html-reporters": "^3.x.x",
+    "koa": "^2.x.x",
+    "koatty": "^3.x.x",
     "rollup": "^3.x.x",
     "rollup-plugin-typescript2": "^0.x.x",
     "standard-version": "^9.x.x",
@@ -47,15 +49,11 @@
   },
   "dependencies": {
     "jaeger-client": "^3.19.0",
-    "koa": "^2.x.x",
-    "koatty": "^3.x.x",
     "koatty_lib": "^1.x.x",
     "koatty_logger": "^2.x.x",
     "prom-client": "^14.1.1"
   },
   "peerDependencies": {
-    "koa": "^2.x.x",
-    "koatty": "^3.x.x",
     "koatty_lib": "^1.x.x",
     "koatty_logger": "^2.x.x"
   }
