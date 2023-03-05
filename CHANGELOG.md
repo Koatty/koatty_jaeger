@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/Koatty/koatty_jaeger/compare/v1.1.0...v1.1.1) (2023-03-05)
+
+
+### Bug Fixes
+
+* defaultOptions add sampler ([0cd17c0](https://github.com/Koatty/koatty_jaeger/commit/0cd17c0ffc3f879c5b9c5196c5a6ffdabd04c422))
+
 ## [1.1.0](https://github.com/Koatty/koatty_jaeger/compare/v1.1.0-2...v1.1.0) (2023-02-26)
 
 
