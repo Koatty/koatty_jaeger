@@ -3,7 +3,7 @@
  * @Usage:
  * @Author: xxx
  * @Date: 2020-12-24 10:32:14
- * @LastEditTime: 2023-02-26 21:43:01
+ * @LastEditTime: 2023-03-05 10:48:14
  */
 import { Koatty, Helper, Logger } from "koatty";
 import * as prometheus from "prom-client";
@@ -24,14 +24,23 @@ interface OptionsInterface extends TracingConfig {
 const defaultOptions: OptionsInterface = {
   // todo
   serviceName: 'unknownKoattyProject',
+  sampler: {
+    type: "const",
+    param: 1,
+  },
   reporter: {
     // Provide the traces endpoint; this forces the client to connect directly to the Collector and send
     // spans over HTTP
-    // logSpans: true,
-    // collectorEndpoint: 'http://127.0.0.1:14268/api/traces',
+    logSpans: true,
+    collectorEndpoint: 'http://127.0.0.1:14268/api/traces',
     // Provide username and password if authentication is enabled in the Collector
     // username: '',
     // password: '',
+
+    // With Agent 
+    // agentHost: "127.0.0.1",
+    // agentPort: 5778,
+    // agentSocketType: "udp4"
   },
   Options: {
     tags: {},
